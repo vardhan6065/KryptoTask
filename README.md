@@ -1,5 +1,5 @@
 # KryptoTask'
-1) The code Is actually pushed to Main branch So please check the code from main branch.
+1) The code Is actually pushed to Main branch So please check the code from master branch.
 
 2)Functionalities :
   
