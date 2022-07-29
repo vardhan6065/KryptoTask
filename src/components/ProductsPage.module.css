@@ -1,0 +1,14 @@
+.container{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    /* position: relative; */
+    top: 5rem;
+    /* align-items:flex-start; */
+    width: 100%;
+  }
+
+  .mediacarddiv{
+    margin: 25px;
+  }

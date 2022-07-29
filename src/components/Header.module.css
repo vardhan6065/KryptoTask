@@ -1,0 +1,26 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 80%;
+    height: 3.5rem;
+    background-color: #0377ec;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 10%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+
+.title-nam{
+    justify-content: center;
+    width: 20rem;
+    margin-left: 10rem;
+}
+
+
+
+
