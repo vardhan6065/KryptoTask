@@ -1,4 +1,7 @@
 # KryptoTask'
+Link to hosted application : https://vardhan6065.github.io/KryptoTask/
+
+
 1) The code Is actually pushed to Main branch So please check the code from master branch.
 
 2)Functionalities :
