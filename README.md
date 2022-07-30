@@ -35,5 +35,20 @@
 
 Yes, there are some improvements i would love to do if i had enough time.
 
-a)It would have been cooler if item were handled in cart also (add and remove).It is really easy from the current position to implement this. 
-Due to time constraint and other placement ativities the next day, I have tried to achieve maximum friom the given time.
+a)I can include payment module in my application.
+
+b)design could have been better.
+
+
+Some of snapshots of the application : 
+
+![image](https://user-images.githubusercontent.com/66294871/181879695-628ef498-aa10-4842-bca4-03f01c498078.png)
+
+![image](https://user-images.githubusercontent.com/66294871/181879729-1160aa40-fe6c-44eb-8103-bfa6f6a2c390.png)
+
+![image](https://user-images.githubusercontent.com/66294871/181879750-6404a1ef-5d4b-4db8-87ab-2e173394356f.png)
+
+![image](https://user-images.githubusercontent.com/66294871/181879757-e5c9391e-42ec-45f6-88a7-450a25182847.png)
+
+
+
