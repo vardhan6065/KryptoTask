@@ -68,9 +68,10 @@ const uiSlice = createSlice({
                     state.totalCartAmount-=existingItems.price;
                 }
                 else{
+                    if(state.totalCartItems===1)
+                    state.totalCartItems=0;
                     state.cart = state.cart.filter(item => item.id !== removeItem.id);
                     state.totalCartAmount-=removeItem.price;
-                    state.totalCartItems=0;
                 }
                 
         }
