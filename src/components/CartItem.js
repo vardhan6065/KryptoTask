@@ -5,11 +5,28 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import classes from './CartItem.module.css';
-
+import { useDispatch } from "react-redux";
+import { uiActions } from '../store/ui-slice';
 
 //Template modified From material UI to display each item in the cart  
 export default function CartItem(props) {
+  const dispatch=useDispatch();
 
+  const AddItemHandler = () =>{
+    dispatch(uiActions.addItem({
+            id: props.id,
+            price : props.price,
+            image:props.image,
+    }));
+    console.log("yes executed");
+  }
+  const removeItemHandler = () =>{
+    dispatch(uiActions.removeItem({
+            id: props.id,
+            price : props.price,
+    }));
+    console.log("yes executed");
+  }
 
   return (
     <div classname={classes.item}>
@@ -33,7 +50,8 @@ export default function CartItem(props) {
           </Typography>
         </CardContent>
         <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
-          
+            <span onClick={AddItemHandler}>+</span>
+            <span onClick={removeItemHandler}>-</span>
         </Box>
       </Box>
     </Card>

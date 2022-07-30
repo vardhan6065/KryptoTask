@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    /* width: 30%; */
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}

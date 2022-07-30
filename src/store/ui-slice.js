@@ -5,6 +5,7 @@ const uiSlice = createSlice({
     
     name: 'ui',
     initialState: {
+        users:[{"id":"vardhan@gmail.com", "password":"12345"}],
         cart:[],
         totalCartAmount:0,
         totalCartItems:0,
@@ -57,6 +58,21 @@ const uiSlice = createSlice({
                 existingItems.count++;
                 state.totalCartAmount+=parseInt(newItem.price);
             }
+        },
+        removeItem(state,action){
+                const removeItem = action.payload;
+                const existingItems = state.cart.find(item=>item.id===removeItem.id);
+    
+                if(existingItems.count>1){
+                    existingItems.count -= 1;
+                    state.totalCartAmount-=existingItems.price;
+                }
+                else{
+                    state.cart = state.cart.filter(item => item.id !== removeItem.id);
+                    state.totalCartAmount-=removeItem.price;
+                    state.totalCartItems=0;
+                }
+                
         }
     }
 });

@@ -16,16 +16,18 @@ const Cart = (props) => {
 
     const MessaheHandler=()=>{
       dispatch(uiActions.showMessage());
-    } 
+    }
+    
+    
 
      return (
       <Fragment>
         <div className={classes.cartcontainer}>
-          <div className={classes.cart}>
+          {<div className={classes.cart}>
             <h1>My Cart</h1>
 
             {/* This is where the whole cart component will appear from the selected items, whose state stored using redux */}
-            <div className={classes.items}>
+            {<div className={classes.items}>
               {cart.map((item)=>(
                 <div className={classes.item}>
                 <CartItem
@@ -36,8 +38,8 @@ const Cart = (props) => {
                 /> 
               </div>
               ))}
-            </div>
-          </div>
+            </div>}
+          </div>}
           <div className={classes.pricedetails}>
             <h2>Price Details</h2>
               <div className={classes.pricedetailsflexbox}><span>Price</span><span> {Total}</span></div>
@@ -49,7 +51,7 @@ const Cart = (props) => {
         </div>
         
         <div className={classes.order}>
-        <Button variant="contained" onClick={MessaheHandler}>Place Order</Button>  
+        <Button variant="contained" onClick={props.onShowMessage}>Place Order</Button>  
         </div>
       </Fragment>
     );

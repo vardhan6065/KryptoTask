@@ -35,7 +35,7 @@ export default function ProductCard(props) {
       <CardContent>
         <Typography gutterBottom className={classes.info}>
           <p>T-shirt For men</p>
-          <p>{props.price}</p>
+          <p>{props.price} Rs</p>
           <p className={classes.stars}>{props.stars}</p>
         </Typography>
         
