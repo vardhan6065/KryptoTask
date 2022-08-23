@@ -18,7 +18,7 @@ const Login = () =>{
     return (
         <Fragment>
             {/* if user is logged out it will appear as login */}
-            {!Userlogin && <span onClick={ShowLoginHandler}>Login</span>}
+            {!Userlogin && <span onClick={ShowLoginHandler}>Login/Register</span>}
             {/* if user is logged in it will appear as logout */}
             {Userlogin && <span onClick={ShowLoginHandler}>Logout</span>}
         </Fragment>

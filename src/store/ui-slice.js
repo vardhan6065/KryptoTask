@@ -14,28 +14,33 @@ const uiSlice = createSlice({
         LoginPageIsVisible: true,
         ProductsPageIsVisible: false,
         messageIsShown: false,
+        RegisterPageIsVisible:false,
     },
     reducers : {
         makeUserLogin(state){
             state.userIsLoggedIn= true;
             state.LoginPageIsVisible= false;
             state.ProductsPageIsVisible=true;
+            state.RegisterPageIsVisible=false;
         },
         showLogin(state){
             state.userIsLoggedIn= false;
             state.LoginPageIsVisible= true;
             state.ProductsPageIsVisible=false;
             state.CartIsVisible=false;
+            state.RegisterPageIsVisible=false;
         },
         showProducts(state){
             state.ProductsPageIsVisible=true;
             state.CartIsVisible=false;
             state.LoginPageIsVisible= false;
+            state.RegisterPageIsVisible=false;
         },
         showCart(state){
             state.ProductsPageIsVisible=false;
             state.LoginPageIsVisible= false;
             state.CartIsVisible= true;
+            state.RegisterPageIsVisible=false;
         },
         showMessage(state){
             state.messageIsShown= true;
@@ -68,12 +73,29 @@ const uiSlice = createSlice({
                     state.totalCartAmount-=existingItems.price;
                 }
                 else{
-                    if(state.totalCartItems===1)
-                    state.totalCartItems=0;
+                    state.totalCartItems=state.totalCartItems-1;
                     state.cart = state.cart.filter(item => item.id !== removeItem.id);
                     state.totalCartAmount-=removeItem.price;
                 }
-                
+        },
+        RegisterPage(state){
+            state.RegisterPageIsVisible=true;
+            state.userIsLoggedIn= false;
+            state.LoginPageIsVisible= false;
+            state.ProductsPageIsVisible=false;
+            state.CartIsVisible=false;
+        },
+        addUser(state,action){
+            const newUser=action.payload;
+            const existingItems = state.cart.find(item=>item.id===newUser.id);
+            if(existingItems){
+                alert("New User already exists");
+            }else{
+                state.users.push({
+                    id:newUser.id,
+                    password: newUser.password,
+                });
+            }
         }
     }
 });

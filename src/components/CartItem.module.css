@@ -5,3 +5,18 @@
 .item{
     border: 1px solid black;
 }
+
+.addsubtract{
+    /* background-color: black; */
+    padding: 0px;
+    width: 60px;
+}
+
+.addsubtractbutts{
+    display: flex;
+    color: white;
+    padding: 5px;
+    justify-content: center;
+    background-color:black;
+    border-radius: 2px;
+}

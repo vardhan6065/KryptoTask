@@ -39,8 +39,8 @@ export default function CartItem(props) {
       />
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <CardContent sx={{ flex: '1 0 auto' }}>
-          <Typography component="div" variant="h5">
-            t-shirt for men: MEN
+          <Typography component="div" variant="h7">
+            T-shirt for men
           </Typography>
           <Typography variant="subtitle1" color="text.secondary" component="div">
             {props.price}
@@ -49,9 +49,9 @@ export default function CartItem(props) {
             {props.count}
           </Typography>
         </CardContent>
-        <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
-            <span onClick={AddItemHandler}>+</span>
-            <span onClick={removeItemHandler}>-</span>
+        <Box className={classes.addsubtract} sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
+            <span className={classes.addsubtractbutts} onClick={AddItemHandler}>+</span>
+            <span className={classes.addsubtractbutts} onClick={removeItemHandler}>-</span>
         </Box>
       </Box>
     </Card>

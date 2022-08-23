@@ -29,8 +29,8 @@ const Options = (props) => {
     return (
         <div className={classes.options}>
             <Products/>
-            <Login/>
             {Userlogin && <span onClick={ShowCartHandler}>Cart {TotalItems}</span>}
+            <Login/>
         </div>
     );
   };

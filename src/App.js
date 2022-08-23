@@ -10,6 +10,7 @@ import OrderMessage from './components/OrderMessage';
 import { useDispatch } from 'react-redux';
 import { uiActions } from './store/ui-slice';
 import EmptyCart from './components/EmptyCart';
+import RegisterPage from './components/RegisterPage';
 
 function App() {  
   const [messageIsShown, setMessageIsShown]=useState(false);
@@ -20,6 +21,7 @@ function App() {
   const userLoggedIn = useSelector(state => state.ui.userIsLoggedIn);
   const cartIsvisible = useSelector(state => state.ui.CartIsVisible);
   const totalCartItems = useSelector(state => state.ui.totalCartItems);
+  const RegisterPageIsVisible = useSelector(state => state.ui.RegisterPageIsVisible);
 
 
 
@@ -42,6 +44,7 @@ function App() {
       <div className='container'>
         {userLoggedIn && product && <ProductsPage/>}
         {login && !userLoggedIn && <LoginPage/>}
+        {RegisterPageIsVisible && <RegisterPage/>}
         {totalCartItems>0 && cartIsvisible && <Cart onShowMessage={showMessageHandler}/>}
         {!totalCartItems && cartIsvisible && <EmptyCart/>}
       </div>
