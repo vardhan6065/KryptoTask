@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/KryptoTask/static/css/main.911c6eb6.css",
-    "main.js": "/KryptoTask/static/js/main.5465cc69.js",
+    "main.css": "/KryptoTask/static/css/main.ae8285d1.css",
+    "main.js": "/KryptoTask/static/js/main.dba4fc01.js",
     "static/js/787.d3744427.chunk.js": "/KryptoTask/static/js/787.d3744427.chunk.js",
     "index.html": "/KryptoTask/index.html",
-    "main.911c6eb6.css.map": "/KryptoTask/static/css/main.911c6eb6.css.map",
-    "main.5465cc69.js.map": "/KryptoTask/static/js/main.5465cc69.js.map",
+    "main.ae8285d1.css.map": "/KryptoTask/static/css/main.ae8285d1.css.map",
+    "main.dba4fc01.js.map": "/KryptoTask/static/js/main.dba4fc01.js.map",
     "787.d3744427.chunk.js.map": "/KryptoTask/static/js/787.d3744427.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.911c6eb6.css",
-    "static/js/main.5465cc69.js"
+    "static/css/main.ae8285d1.css",
+    "static/js/main.dba4fc01.js"
   ]
 }
